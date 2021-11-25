@@ -1,72 +1,147 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  /* width: 80vw; */
   font-family: Arial, Helvetica, sans-serif;
-  /* margin: 0 auto; */
+  border: 5px solid blue;
+}
+
+.bio-details {
+  max-width: 130rem;
+  background-color: #fdf2e9;
+  padding: 2.4rem;
+  margin: 0 auto;
+}
+.header {
+  padding: 2.4rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.heading-primary {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+
+.section-bio {
+  padding: 0 3.2rem;
+  margin-bottom: 3.2rem;
 }
 
 .bio {
-  background-color: rgb(228, 221, 212);
-  border: 5px solid rgb(0, 183, 255);
   display: grid;
-  grid-template-columns: 180px 1fr 1fr;
-  gap: 24px;
-  padding: 16px;
-
+  grid-template-columns: 1fr 3fr;
+  gap: 3.2rem;
 }
 
-.div-0 {
-  padding: 16px;
-  /* width: 100%; */
-  grid-column: 1 / -1;
-  justify-content: center;
+.bio-img-box {
+  justify-self: start;
 }
 
-.div-1 {
-  grid-area: 180px;
-  justify-content: center;
-}
-.div-1 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 40px;
-}
-
-.div-2 {
-  align-items: center;
-  grid-column: 2 / -1;
-
-}
-
-.div-3 {
-  grid-column: 1 / -1;
-}
-li {
-  margin-bottom: 16px;
-}
-
-.div-4 {
-  grid-column: 1 / -1;
-}
-
-.div-4 ul {
-  list-style-type: none;
-}
-
-h3 {
-  margin-bottom: 16px;
-  background-color: rgb(245, 166, 166);
-  padding: 5px;
-}
-
-@media only screen and (max-width:600px) {
-  [class*="div-"] {
-    grid-column: 1 / -1;
-  }
+.bio-text-box {
+  justify-self: end;
+  font-size: 1.8rem;
   
+}
+
+.bio-img {
+  width: 12.8rem;
+  border-radius: 11px;
+}
+
+.section-objective {
+  padding:0 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 0.8rem 0;
+  margin-bottom: 1.2rem;
+}
+
+.objective-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.section-edu {
+  padding: 0 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.edu-list li {
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.section-favs {
+  padding: 0 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.favs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-text {
+  font-size: 1.8rem;
+}
+
+/* Media Queries */
+
+/* BELOW 600px */
+
+@media (max-width: 37.5em ) {
+  .heading-primary {
+    font-size: 3.2rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .bio {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .bio-text-box {
+    justify-self: start;
+    font-size: 1.4rem;
+  }
+
+  .objective-text {
+    font-size: 1.4rem;
+  }
+
+  .section-edu li {
+    font-size: 1.4rem;
+  }
+
+  .favs {
+    grid-template-columns: 1fr;
+  }
+
+  .div-text {
+    font-size: 1.4rem;
+  }
+
+
+
+
 }
